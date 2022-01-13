@@ -1,7 +1,38 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+
+import Header from './components/header';
+import Footer from './components/footer';
+
+import Login from './page/login';
+import Routes from './routes';
+
 import './App.css';
 
-function App() {
+function App(){
+  const [user, setUser] = useState(null);
+
+    if(user === null){
+      return (
+        <Login />
+      );
+    }
+
+    return (
+      <BrowserRouter>
+          <Header />
+
+          <Routes />
+          
+          <Footer />
+      </BrowserRouter>
+  );
+}
+
+export default App;
+
+
+/*function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -22,4 +53,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;*/
