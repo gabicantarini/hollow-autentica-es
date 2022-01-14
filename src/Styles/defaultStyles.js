@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const BtnDefaultIcons = styled.button`
 
@@ -27,13 +27,11 @@ export const BtnDefaultIcons = styled.button`
 `;
 
 export const BtnDefault = styled(BtnDefaultIcons)`
+  background-color: #ffc107;
+  color: #fff;
+  display: inline;
 
-    background-color: #FFC107;
-    color: #fff;
-    display: inline;
-
-    &:hover{
-        background-color: #FFC107;
-    }
-
+  &:hover {
+    background-color: #ffc107;
+  }
 `;

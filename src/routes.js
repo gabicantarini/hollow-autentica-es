@@ -1,24 +1,15 @@
 import React from "react";
-import { Switch, Route } from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
 
-import Login from './page/login';
-import Home from './page/home';
+import { Login } from "./Pages/Login";
+import Home from "./Pages/Home";
 
-export default () => {
+export const MyRoutes = () => {
+  return (
+    <Routes>
+      <Route exact path="login" element={<Login />} />
 
-    return(
-        <Switch>
-             
-            <Route exact path='/login'>
-               <Login />
-
-            </Route>   
-
-            <Route exact path='/home'>
-               <Home />
-
-            </Route>       
-
-        </Switch>
-    );
-}
+      <Route exact path="/" element={<Home />} />
+    </Routes>
+  );
+};
